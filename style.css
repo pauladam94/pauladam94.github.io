@@ -1,0 +1,46 @@
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+header {
+  margin: 30px;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  border-radius: 0px;
+}
+
+main {
+  margin: 1% 1% 1% 1%;
+  padding: 1% 1% 1% 1%;
+}
+
+.logo-lapin {
+  width: 30px;
+  border-radius: 5px;
+  float: center;
+  margin-right: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
+}
