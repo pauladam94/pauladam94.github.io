@@ -1,0 +1,21 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.nav-button {
+  color: black;
+  text-align: center;
+  background-color: aliceblue;
+  margin: 0px;
+  padding: 1% 4% 1% 4%;
+  font-size: 2rem;
+  transition: ease-out 0.2s;
+}
+
+.nav-button:hover {
+  background-color: black;
+  color: white;
+  transition: ease 1s;
+}
