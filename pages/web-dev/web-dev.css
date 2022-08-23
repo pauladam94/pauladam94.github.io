@@ -1,4 +1,21 @@
-#web-dev {
+#web-dev-button {
   background-color: black;
   color: white;
+}
+
+#sflk {
+  grid-area: sflk;
+}
+#my_website {
+  grid-area: my_website;
+}
+main {
+  display: grid;
+  grid-template-areas: "my_website sflk";
+  gap: 20%;
+}
+main div {
+  box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
+  padding: 20% 20% 20% 20%;
+  border-radius: 10%;
 }

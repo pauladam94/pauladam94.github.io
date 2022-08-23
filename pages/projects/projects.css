@@ -1,4 +1,31 @@
-#projects {
+#projects-button {
   background-color: black;
   color: white;
+}
+#game-dev {
+  grid-area: game-dev;
+}
+#fire-propagation {
+  grid-area: fire-propagation;
+}
+#ai {
+  grid-area: ai;
+}
+#jgk-algo {
+  grid-area: jgk-algo;
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "game-dev fire-propagation"
+    "ai jgk-algo";
+  gap: 5%;
+}
+
+main div {
+  border: 2px solid black;
+  /* box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff; */
+  padding: 80px 130px 80px 130px;
+  border-radius: 17%;
+  text-align: center;
 }
