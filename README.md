@@ -7,6 +7,6 @@ Explaination of the different folder :
 
 Pages : the different pages
 
-Header/nav/footer : the different static part of the website that are link to every pages and the index.html.
+Header/nav/footer : the different static part of the website
 
-Images : contains the images used in the website
+Images : images used in the website
