@@ -24,7 +24,7 @@ main {
 
 main div {
   border: 2px solid black;
-  /* box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff; */
+  box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
   padding: 80px 130px 80px 130px;
   border-radius: 17%;
   text-align: center;
