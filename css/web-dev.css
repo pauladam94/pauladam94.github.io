@@ -16,6 +16,6 @@ main {
 }
 main div {
   box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
-  padding: 20% 20% 20% 20%;
-  border-radius: 10%;
+  padding: 50p 50px 50px 50px;
+  border-radius: 0%;
 }
