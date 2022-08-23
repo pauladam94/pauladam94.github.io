@@ -6,41 +6,49 @@
   float: left;
   margin: 0% 2% 0% 2%;
 }
+
 .link-social {
   margin: 1% 1% 1% 1%;
   padding: 1% 1% 1% 1%;
 }
-
-.button-link:hover {
-  width: 100px;
-}
-
-.header-small-logo {
-  width: 30px;
-}
-
 .header-title {
-  background-color: aliceblue;
+  background-color: rgb(240, 240, 240);
   border-radius: 10px;
   padding: 0% 10% 0% 10%;
-  box-shadow:  8px 8px 9px #969696,
-             -8px -8px 9px #ffffff;
+  box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
 }
-
 .name-title {
   margin: 0% 0% 0% 0%;
 }
-
 .name-title-sub {
   margin: 0% 0% 0% 0%;
-}
-
-.link-social {
-  display: flex;
-  flex-direction: column;
 }
 .logo-ens-rennes {
   width: auto;
   height: 55px;
   float: inline-end;
+}
+
+.button-link {
+  width: 40px;
+  padding: 0% 0% 10% 50%;
+}
+#github {
+  grid-area: github;
+}
+#dicord {
+  grid-area: discord;
+}
+#linkedin {
+  grid-area: linkedin;
+}
+#instagram {
+  grid-area: instagram;
+}
+.link-social {
+  display: grid;
+  grid-template-areas:
+    "github linkedin"
+    "instagram discord";
+  gap: 20%;
 }
