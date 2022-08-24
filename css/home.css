@@ -2,3 +2,8 @@
   background-color: black;
   color: white;
 }
+.logo-lapin {
+  width: 30px;
+  border-radius: 5px;
+  float: center;
+}
