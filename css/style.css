@@ -6,7 +6,6 @@
   justify-content: center;
   outline: none;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
   margin: 0;
   padding: 0;
   width: auto;
@@ -14,14 +13,11 @@
 }
 
 html {
-  background-color: white;
+  background-color: rgba(255, 247, 26, 0.213);
 }
-/*
-@media screen and (max-width: 1200px) {
-  html {
-    margin: 0;
-  }
-} */
+.button-link {
+  width : 1vw;
+}
 header {
   margin: 1vw 15vw 1vw 15vw;
   padding: 0%;
@@ -44,7 +40,7 @@ main,
 footer {
   height: 100%;
   color: white;
-  background-color: black;
+  background-color: rgb(255, 245, 104);
 }
 
 footer {

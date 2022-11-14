@@ -1,22 +1,11 @@
 /*----------header----------*/
-.photo-profil {
-  width: 20%;
-  border-radius: 10%;
-  margin: 0;
-  float: left;
-  margin: 0;
-}
-
 .link-social {
   margin: 0;
   padding: 0;
 }
+
 .header-title {
-  font-size: 2vw;
-  background-color: rgb(240, 240, 240);
-  border-radius: 10px;
-  padding: 0% 7vw 0% 7vw;
-  box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
+  border-bottom: 20px groove rgb(255, 90, 148);
 }
 .name-title {
   margin: 0% 0% 0% 0%;
@@ -24,32 +13,11 @@
 .name-title-sub {
   margin: 0% 0% 0% 0%;
 }
-.logo-ens-rennes {
-  height: 4vw;
-  float: inline-end;
-}
-
-.button-link {
-  width: 5vw;
+.logo-SFLK {
+  height: 10vw;
 }
 #github {
   grid-area: github;
-}
-#dicord {
-  grid-area: discord;
-}
-#linkedin {
-  grid-area: linkedin;
-}
-#instagram {
-  grid-area: instagram;
-}
-.link-social {
-  display: grid;
-  grid-template-areas:
-    "github linkedin"
-    "instagram discord";
-  gap: 1vw;
 }
 
 /*----------nav----------*/
@@ -60,20 +28,23 @@
 .nav-button {
   text-align: center;
   padding: 1% 4% 1% 4%;
+  margin: 0% 1%0% 1%;
   font-size: 3vw;
   transition: ease-out 0.3s;
+  border-radius : 2vw;
 }
 .nav-button:visited {
   color: black;
 }
 .nav-button:hover {
-  background-color: black;
+  background-color: rgb(255, 90, 148);
   color: white;
   transition: ease 0.3s;
 }
+
 /*----------footer----------*/
 .footer-text {
-  font-weight: bold;
+  color : rgb(255, 90, 148);
   margin: 0;
   padding: 0;
 }
