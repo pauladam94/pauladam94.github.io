@@ -1,11 +1,22 @@
 /*----------header----------*/
+.photo-profil {
+  width: 20%;
+  border-radius: 10%;
+  margin: 0;
+  float: left;
+  margin: 0;
+}
+
 .link-social {
   margin: 0;
   padding: 0;
 }
-
 .header-title {
-  border-bottom: 20px groove rgb(255, 90, 148);
+  font-size: 2vw;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 0% 7vw 0% 7vw;
+  box-shadow: 8px 8px 9px #969696, -8px -8px 9px #ffffff;
 }
 .name-title {
   margin: 0% 0% 0% 0%;
@@ -13,47 +24,56 @@
 .name-title-sub {
   margin: 0% 0% 0% 0%;
 }
-.logo-SFLK {
-  width: 20vw;
-}
-@media screen and (max-width: 1024px) {
-  .logo-SFLK {
-    width: 40vw;
-  }
+.logo-ens-rennes {
+  height: 4vw;
+  float: inline-end;
 }
 
+.button-link {
+  width: 5vw;
+}
 #github {
   grid-area: github;
+}
+#dicord {
+  grid-area: discord;
+}
+#linkedin {
+  grid-area: linkedin;
+}
+#instagram {
+  grid-area: instagram;
+}
+.link-social {
+  display: grid;
+  grid-template-areas:
+    "github linkedin"
+    "instagram discord";
+  gap: 1vw;
 }
 
 /*----------nav----------*/
 .nav-bar {
   display: flex;
-  letter-spacing: 0.2vw;
-  justify-content: center;
-  font-size: 3.5vw;
+  letter-spacing: 0.3vw;
 }
 .nav-button {
-  width: 25vw;
   text-align: center;
-  padding: 0.5% 1% 0.5% 1%;
-  margin: 0% 1% 1% 1%;
+  padding: 1% 4% 1% 4%;
+  font-size: 3vw;
   transition: ease-out 0.3s;
-  border-radius : 2vw;
-  color: black;
 }
 .nav-button:visited {
   color: black;
 }
 .nav-button:hover {
-  background-color: rgb(255, 90, 148);
+  background-color: black;
   color: white;
   transition: ease 0.3s;
 }
-
 /*----------footer----------*/
 .footer-text {
-  color : rgb(255, 90, 148);
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }

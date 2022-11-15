@@ -1,0 +1,26 @@
+#interests-button {
+  background-color: black;
+  color: white;
+}
+
+#chess {
+  grid-area: chess;
+}
+#gaming {
+  grid-area: gaming;
+}
+#music {
+  grid-area: music;
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "chess gaming"
+    "music music";
+  gap: 5%;
+}
+main div {
+  border: 2px solid white;
+  padding: 10% 10% 10% 10%;
+  border-radius: 10%;
+}
