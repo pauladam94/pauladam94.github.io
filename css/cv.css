@@ -1,12 +1,18 @@
-#cv-button {
-  background-color: black;
-  color: white;
+.download-cv{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(219, 119, 119);
 }
 
 .download-logo {
   width: 20px;
-  background-color: red;
+  background-color: transparent;
 }
 .logo-lapin {
   width: 20px;
+}
+
+#web_cv {
+  width: 100%;
+  height: 1200;
 }
