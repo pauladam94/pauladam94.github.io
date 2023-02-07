@@ -23,8 +23,9 @@ main {
 }
 
 main div {
+  margin : 3vw 0vw 3vw 0vw;
   border: 2px solid white;
-  padding: 5vw 8vw 8vw 5vw;
+  padding: 0vw 0vw 0vw 0vw;
   border-radius: 0%;
   text-align: center;
 }

@@ -15,7 +15,7 @@ main {
   gap: 20%;
 }
 main div {
-  border: 2px solid white;
+  border: 1px solid white;
   padding: 50p 50px 50px 50px;
   border-radius: 0%;
 }

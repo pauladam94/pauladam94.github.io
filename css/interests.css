@@ -17,10 +17,28 @@ main {
   grid-template-areas:
     "chess gaming"
     "music music";
-  gap: 5%;
+  gap: 1vw;
+  text-align:justify;
 }
-main div {
+
+#chess, #gaming, #music {
   border: 2px solid white;
-  padding: 10% 10% 10% 10%;
-  border-radius: 10%;
+  padding: 3vw 3vw 3vw 3vw;
+  margin: 1vw 0vw 1vw 0vw;
+  border-radius: 0%;
+}
+
+.title-interests {
+  font : 2.5vw bold;
+  text-align: center;
+  margin: 0% 0% 0% 0%;
+}
+
+#logo-chesscom {
+  height: 3vw;
+  float: inline-end;
+}
+#logo-lichess{
+  height: 5vw;
+  float: inline-end;
 }
