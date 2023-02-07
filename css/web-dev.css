@@ -19,3 +19,8 @@ main div {
   padding: 50p 50px 50px 50px;
   border-radius: 0%;
 }
+
+#image-my-website , #image-github-my-website{
+  height: 5vw;
+  float: inline-end;
+}
