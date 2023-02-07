@@ -3,36 +3,33 @@
   color: white;
 }
 
-#chess {
-  grid-area: chess;
+#interests-1 {
+  grid-area: x1;
 }
-#gaming {
-  grid-area: gaming;
+#interests-2 {
+  grid-area: x2;
 }
-#music {
-  grid-area: music;
+#interests-3 {
+  grid-area: x3;
 }
 main {
   display: grid;
   grid-template-areas:
-    "chess gaming"
-    "music music";
+    "x1 x2"
+    "x3 x3";
   gap: 1vw;
   text-align:justify;
 }
 
-#chess, #gaming, #music {
+.grid {
   border: 2px solid white;
   padding: 3vw 3vw 3vw 3vw;
-  margin: 1vw 0vw 1vw 0vw;
+  margin: 1vw 1vw 1vw 1vw;
   border-radius: 0%;
+  height : 8vw;
+  width: 30vw;
 }
 
-.title-interests {
-  font : 2.5vw bold;
-  text-align: center;
-  margin: 0% 0% 0% 0%;
-}
 
 #logo-chesscom {
   height: 3vw;

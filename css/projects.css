@@ -2,30 +2,34 @@
   background-color: black;
   color: white;
 }
-#game-dev {
-  grid-area: game-dev;
+#projects-1 {
+  grid-area: x1;
 }
-#fire-propagation {
-  grid-area: fire-propagation;
+#projects-2 {
+  grid-area: x2;
 }
-#ai {
-  grid-area: ai;
+#projects-3 {
+  grid-area: x3;
 }
-#jgk-algo {
-  grid-area: jgk-algo;
+#projects-4 {
+  grid-area: x4;
 }
+.grid {
+  color : white;
+  border: 2px solid white;
+  padding: 2vw 2vw 2vw 2vw;
+  margin: 1vw 2vw 1vw 2vw;
+  border-radius: 0%;
+  height : 8vw;
+  width: 30vw;
+}
+
 main {
   display: grid;
   grid-template-areas:
-    "game-dev fire-propagation"
-    "ai jgk-algo";
-  gap: 5%;
+    "x1 x2"
+    "x3 x4";
+  gap: 1vw;
+  text-align: justify;
 }
 
-main div {
-  margin : 3vw 0vw 3vw 0vw;
-  border: 2px solid white;
-  padding: 0vw 0vw 0vw 0vw;
-  border-radius: 0%;
-  text-align: center;
-}
