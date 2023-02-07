@@ -14,10 +14,19 @@
   background-color: transparent;
 }
 
+
 @media screen and (max-width: 1024px) {
-  .web_cv {
+  .web-cv {
     width: 600px;
     height: 800px;
   }
 }
+
+
+/*
+#web-cv {
+  width: 10vw;
+  height: 10vw;
+}
+*/
 

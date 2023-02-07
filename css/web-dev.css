@@ -17,10 +17,10 @@ main {
 .grid {
   color : white;
   border: 2px solid white;
-  padding: 2vw 2vw 2vw 2vw;
+  padding: 1vw 1vw 1vw 1vw;
   margin: 1vw 2vw 1vw 2vw;
   border-radius: 0%;
-  height : 20vw;
+  height : 25vw;
   width: 30vw;
 }
 
@@ -29,7 +29,13 @@ main {
   flex-direction: column;
 }
 
-#image-my-website , #image-github-my-website{
+#image-my-website {
   height: 7vw;
-  float: inline-end;
+}
+#image-github-my-website{
+  height: 12vw;
+}
+#SFLK-website {
+  height : 20vw;
+  width : 28vw;
 }

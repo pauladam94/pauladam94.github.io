@@ -51,6 +51,10 @@ h3 {
   margin: 0% 0% 0% 0%;
 }
 
+h4 {
+  font : 2vw;
+}
+
 p {
   font-size: 1vw;
   text-align: justify;
