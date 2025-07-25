@@ -12,7 +12,7 @@
 }
 
 #let outside-link(src) = {
-  let dst = "docs/" + src.slice("src/".len(), src.len() - ".typ".len()) + ".html"
+  let dst = src.slice("src/".len(), src.len() - ".typ".len()) + ".html"
 
   [ #metadata(src) <todo> ]
   link(dst)
