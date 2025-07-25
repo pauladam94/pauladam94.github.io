@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/cv.typ/main/cv.typ.schema.json
+
+personal:
+  name: Paul Adam
+  email: paul.adam@ens-rennes.fr
+  phone: 00 33 6 52 45 46 93
+  url:
+  location:
+    city: Rennes
+    region:
+    postalCode:
+    country: France
+
+work:
+  - organization: "Computer Science Research Lab : INRIA"
+    url: https://www.inria.fr/fr
+    location: Rennes, France
+    positions:
+      - position: Computer Science Intern
+        startDate: 2023-05-01
+        endDate: 2023-08-01
+        highlights:
+          - I have worked on the HyperAST project with the DIVERSE research team. This tool in development aims at analyzing git history in a more efficient way. For each commit we get an AST, the HyperAST takes the time into account to store a complete image of a complete git history that can be searched faster than any other state-of-the-art method.
+
+education:
+  - institution: ENS Rennes
+    url: https://www.ens-rennes.fr/
+    area: Computer Science
+    studyType: First Year Master
+    startDate: 2023-09-01
+    endDate: 2024-05-01
+    location: Rennes, France
+    honors:
+      - 13.3 / 20.0
+    courses:
+      - Logic and Knowledge Representation
+      - Machine Learning
+      - General Compiler Concept
+      - Philosophy and Epistemology
+      - Information Theory
+    highlights:
+  - institution: ENS Rennes
+    url: https://www.ens-rennes.fr/
+    area: Theoretical Mathematics
+    studyType: Third Year Bachelor
+    startDate: 2022-09-01
+    endDate: 2023-05-01
+    location: Rennes France
+    honors:
+      - 14.1 / 20.0
+    courses:
+      - Lebesgue Integration
+      - Group Theory
+      - Statistics and Probability
+      - Rings and Arithmetic
+      - General Topology
+      - Differential Calculus
+      - Complexity Theory
+      - Normed Vector Spaces
+    highlights:
+  - institution: ENS Rennes
+    url: https://www.ens-rennes.fr/
+    area: Computer Science
+    studyType: Third Year Bachelor
+    startDate: 2022-09-01
+    endDate: 2023-05-01
+    location: Rennes, France
+    honors:
+      - 13.4 / 20.0
+    courses:
+      - Advanced Algorithm
+      - Programming in C, Ocaml and C++
+      - Cryptography
+      - Logic
+      - Architecture and System
+      - Theory of Computability
+      - Semantics and proof assistants
+      - Optimization
+      - Image and Signal Processing
+    highlights:
+  - institution: Blaise Pascal College in Orsay
+    url: 
+    area: Computer Science, Theoretical Mathematics and Theoretical Physics
+    studyType: First two years Bachelor
+    startDate: 2020-09-01
+    endDate: 2022-08-30
+    location: Orsay, France
+    honors:
+    courses:
+      - "Theoretical Mathematics : Algebra, Probability, Integral calculus, Analysis, Differential equation"
+      - "Theoretical Physics : Classical Mechanics, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Quantum Field Theory, Particle Physics"
+      - "Computer Science : Ocaml programming, Graph theory."
+    highlights:
+
+
+certificates:
+  - name: "Learning How to Learn: Powerful mental tools to help you master tough subjects"
+    date: 2021-09-01
+    issuer: Coursera
+    url: https://example.com
+  # - name: B1 level German
+
+projects:
+  - name: "Types to Enforce Borrow Checking Properties"
+    url: https://example.com/
+    affiliation: INRIA, SQUIRREL Team
+    startDate: 2023-09-01
+    endDate: 2024-05-18
+    highlights: 
+      - Establishing the semantics of a small subset of Rust. Writing a type checker and a borrow checker for this language
+      - Proof that if a program types, then it does not have any memory errors during execution (the goal is to do it with Coq)
+skills:
+  - category: Programming Languages
+    skills:
+      - Rust
+      - Ocaml
+      - C
+      - Coq
+      - Python
+      - C++
+      - Java
+      - HTML-CSS-Javascript
+  - category: Markup Language
+    skills:
+    - Typst
+    - LaTeX
+  - category: Version Control
+    skills:
+      - Git
+      - Github
+      - Gitlab
+  - category: IDE
+    skills:
+      - Neovim
+      - Vscode
+      - IntelliJ
+languages:
+  - language: French
+    fluency: Native speaker
+  - language: English
+    fluency: Fluent speaker
+  - language: German
+    fluency: Intermediate speaker
+  - language: Esperanto
+    fluency: Beginner speaker
+
+interests:
+  - Music Playing
+  - Cinema
+  - Classical and Pop Music
+
+references:
+  - name: Dr. David Baelde
+    reference: "TODO"
+    url: https://people.irisa.fr/David.Baelde/

@@ -1,0 +1,243 @@
+[General]
+name = "Paul"
+surname = "Adam"
+email = "poladam2002@gmail.com"
+picture = "../pp.jpeg"
+telephone = "00 33 6 52 45 46 93"
+place = "Paris - France"
+intro = "Passionnée d'informatique. TODO"
+
+[Stage]
+title.fr = "Stage"
+title.en = "Internship"
+[Stage.Stage_M1]
+title.en = "Research Intership First Year Master"
+title.fr = "Stage de Recherche Master 1"
+subtitle.en = "Rust & C Foreign Function Interface (FFI) Semantics"
+subtitle.fr = "Interface (FFI) entre Rust et C"
+place = "Utrecht, Pays Bas"
+affiliation = "Utrecht University"
+text.fr = '''
+Écriture en Coq d'une sémantique d'un interpréteur d'une sous partie de Rust et C. Cet interpreteur selon certaines conditions assurent les préconditions du Rust même lors de l'exécution de code C sur les structures de données Rust.
+'''
+text.en = '''
+Theoretical semantics of an interpreteur of both C and Rust (simplified version). This simple interpreter assures good behavior even for C and Rust code changing shared structures of data.
+'''
+time.fr = "Été 2024"
+time.en = "Summer 2024"
+duree.fr = "3 mois"
+duree.en = "3 months"
+
+[Stage.Projet_M1]
+title.en = "Research Project First Year Master"
+title.fr = "Projet de Recherche Master 1"
+subtitle.en = "Types to Enforce Borrow Checking Properties"
+subtitle.fr = "Système de Type pour du Borrow Checking"
+place = "Rennes, France"
+affiliation = "INRIA - SQUIRREL"
+text.en = '''
+Establish the semantics of a small subset of Rust under the supervision of David Baelde. Writing a type checker and a borrow checker for this language. Proof that if a program types, then it does not have any memory errors during execution.
+'''
+text.fr = '''
+Ecriture d'une sémantique et d'un système de type pour une partie du langage Rust sous la direction de David Baelde en parallèle de mes cours de Master 1. L'objectif étant d'assurer des propriétés de Borrow checking. Travail réutilisé dans un cours de Licence d'introduction au Rust.
+'''
+time = "2024"
+duree.fr = "6 mois"
+duree.en = "6 months"
+
+[Stage.Stage_L3]
+title.en = "Research Internship Third Year Bachelor"
+title.fr = "Stage de Recherche Licence 3"
+subtitle = "HyperAST"
+place = "Rennes, France"
+affiliation = "INRIA - DIVERSE"
+text.en = '''
+Work on the HyperAST project with the DIVERSE research team. This tool in development aims at analyzing git history in a more efficient way. For each commit we get an AST, the HyperAST takes the time into account to store a complete image of a complete git history that can be searched faster than any other state-of-the-art method.
+'''
+text.fr = '''
+Travaille sur le projet HyperAST de l'équipe de recherche DIVERSE. Cette structure de donnée permet d'analyser des historiques git. A chaque commit est associé un AST, l'HyperAST prend en compte le temps pour stocker une image complète d'un projet ce qui permet une analyse plus rapide.
+'''
+time.fr = "Été 2023"
+time.en = "Summer 2023"
+duree.fr = "2 mois"
+duree.en = "2 months"
+
+[Etude]
+title.fr = "Etude"
+title.en = "Study"
+[Etude.M2_Agreg]
+title.fr = "Master 2 Agrégation Informatique"
+title.en = "Second Year Computer Science Master"
+place = "ENS Rennes, France"
+cours.fr = [
+  "Apprentissable, IA",
+  "Langage Formel",
+  "Programmation Théorique et Compilation", 
+  "Sémantique (Logique, Lambda Calcul)",
+  "Calculabilité",
+  "Architectures",
+  "Réseaux",
+  "Systèmes d'exploitations",
+  "Algorithmique",
+  "Bases de données"
+]
+cours.en = [
+  "Machine Learning",
+  "Automata Theory",
+  "Programming Langage Theory, Compilation, Parsing",
+  "Sémantics, Lambda Calculus",
+  "Calculability",
+  "Computer Architecture",
+  "Networks",
+  "Operating Systems",
+  "Algorithmics",
+  "Database Theory"
+]
+time = "2024 - 2025"
+note = "Admis 4e   15.25 / 20.0"
+[Etude.M1]
+title.fr = "Master 1 Recherche Informatique"
+title.en = "First Year Computer Science Research Master"
+place = "ENS Rennes, France"
+cours.en = [
+  "Logic and Knowledge Representation",
+  "Machine Learning",
+  "General Compiler Concept",
+  "Philosophy and Epistemology",
+  "Information Theory",
+  "Programmation Parallèle",
+  "Systèmes d'exploitations"
+]
+cours.fr = [
+  "Logique et représentation des connaissances",
+  "Machine Learning",
+  "Compilation",
+  "Philosophie et Espitémologie",
+  "Théorie de l'information",
+  "Logique Avancée",
+  "Parallel programming",
+  "Advanced Operating System"
+]
+time = "2023 - 2024"
+note = "13.3 / 20.0"
+[Etude.L3_Info]
+title.fr = "Licence 3 Informatique"
+title.en = "Third Year Computer Science Bachelor"
+place = "ENS Rennes, France"
+cours.en = [
+  "Advanced Algorithm",
+  "Programming in C, Ocaml and C++",
+  "Cryptography",
+  "Logic",
+  "Architecture and System",
+  "Theory of Computability",
+  "Semantics and proof assistants",
+  "Image and Signal Processing",
+  "Complexity Theory",
+]
+cours.fr = [
+  "Algorithmiques",
+  "Programmation C, Ocaml et C++",
+  "Cryptographie",
+  "Logique",
+  "Architecture et Système",
+  "Calculabilité",
+  "Sémantique et preuve de programme",
+  "Analyse d'images",
+  "Théorie de la complexité"
+]
+time = "2022 - 2023"
+note = "13.4 / 20.0"
+[Etude.L3_Maths]
+title.fr = "Licence 3 Mathématiques"
+title.en = "Third Year Mathematics Bachelor"
+place = "ENS Rennes, France"
+cours.en = [
+  "Lebesgue Integration",
+  "Group Theory",
+  "Statistics and Probability",
+  "Rings and Arithmetic",
+  "General Topology",
+  "Differential Calculus",
+  "Optimisation",  
+  "Normed Vector Spaces"
+]
+cours.fr = [
+  "Intégration de Lesbegues",
+  "Théorie des groupes",
+  "Probabilité et Statistiques",
+  "Anneaux et Corps",
+  "Topologie Générale",
+  "Calcul Différentiel",
+  "Optimisation",
+  "Espaces vectoriels normés"
+]
+time = "2022 - 2023"
+note = "14.1 / 20.0"
+[Etude.Prepa]
+title.fr = "Classe Préparatoire Scientifique MPSI - MP*"
+title.en = "First and Second Year Scientific Bachelor"
+place = "Blaise Pascal, France"
+cours.en = [
+  "Mathematics (Algebra, Probability, Integral calculus, Analysis, Differential equation)",
+  "Physics (Classical Mechanics, Quantum Mechanics, Electromagnetism, Statistical Mechanics, Quantum Field Theory, Particle Physics)",
+  "Computer Science (Ocaml programming, Graph theory)"
+]
+cours.fr = [
+  "Mathématique (Algèbre, Probabilités, Calcul Intégral, Analyse, Equations Différentielles)",
+  "Physique (Mécanique classique, Physique Quantique, Electromagnétisme, Mécanique Statistiques, Physique des particules, Chimie)",
+  "Informatique (Programmation Ocaml, Théorie des graphes)"
+]
+time = "2020 - 2022"
+note = ""
+
+[Etude.Lycee]
+title.fr = "Lycée - Baccalauréat"
+title.en = "HighSchool Graduation"
+place = "Sainte Marie, France"
+cours = []
+time = "2017 - 2020"
+note = "19.3 / 20.0"
+
+[Interests]
+title.fr = "Interêts"
+title.en = "Interests"
+[Interests.Hobbits]
+title.fr = "Hobbies"
+title.en = "Hobbies"
+content.fr = [
+  "Joue de la trompette depuis 15 ans après 10 ans de conservatoire",
+  "Cinéma",
+  "Musique classique et variété"
+]
+content.en = [
+  "I love playing the trumpet for 15 years, love watching films, playing and listening to classical music and jazz"
+]
+[Interests.Lang_Prog]
+title.fr = "Langages de programmation"
+title.en = "Programming Langages"
+content = [
+  "Rust",
+  "Ocaml",
+  "C",
+  "C++",
+  "Ocaml",
+  "Python",
+  "Java",
+  "HTML-CSS-Javascript"
+]
+[Interests.Langues]
+title.en = "Langages"
+title.fr = "Langues"
+content.fr = [
+  "Francais (natif)",
+  "Anglais (fluide, TOEIC 925 / 990)",
+  "Alemand (intermédiaire, B1)",
+  "Esperanto (débutant)"
+]
+content.en = [
+  "French (native)",
+  "English (fluent, TOEIC 925 / 990)",
+  "German (intermediate, B1)",
+  "Esperanto (beginner)"
+]
