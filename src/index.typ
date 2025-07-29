@@ -5,7 +5,7 @@
 
 Here is my personal web page.
 
-This is my cv #outside-link("src/cv/cv_2025/main.typ")
+This is #outside-link("src/cv/cv_2025/main.typ")[my cv].
 
 #metadata("This is a note") <note>
 

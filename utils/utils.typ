@@ -1,5 +1,3 @@
-
-
 #let basic-page(c) = {
   set align(center)
   c
@@ -11,7 +9,7 @@
   }
 }
 
-#let outside-link(src) = {
+#let outside-link(src, body) = {
   let dst = src.slice("src/".len(), src.len() - ".typ".len()) + ".html"
 
   [ #metadata(src) <todo> ]

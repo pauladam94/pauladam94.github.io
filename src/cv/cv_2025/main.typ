@@ -1,3 +1,12 @@
+
+#let frame_if_html(content) = context {
+  if target() == "paged" {
+    content
+  } else {
+    html.frame(content)
+  }
+}
+
 #let cv(lang) = [
 
 #assert(lang == "en" or lang == "fr", message: "lang should be french(fr) or english(en)") 
@@ -139,10 +148,15 @@
     etude(values)
   }
 }
-
 ]
 
-#show : html.frame
+
+// #show math.equation: it => frame_if_html(it)
+// #show block : it => frame_if_html(it)
+// #show box : it => frame_if_html(it)
+// #show grid : it => frame_if_html(it)
+// #show align : it => frame_if_html(it)
+// #show par : it => frame_if_html(it)
 
 #cv("fr")
 #cv("en")
