@@ -1,3 +1,5 @@
+#import "../../../utils/utils.typ" : basic-page
+#show : basic-page
 
 #let frame_if_html(content) = context {
   if target() == "paged" {

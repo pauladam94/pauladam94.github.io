@@ -2,14 +2,12 @@ import subprocess
 import json
 import os
 
-
-
-
 typst = " typst "
 compile = " c "
 features = " --features html"
 query = " query "
 format = " -f html "
+target = "--target html "
 root = " --root . "
 field = " --field value "
 todo_label = " \"<todo>\" "
@@ -35,7 +33,7 @@ class Typst:
         execute(typst + compile + features + root + format + src + dest)
 
     def query_outside_link(self, file):
-        command = typst + query + features + root + file + todo_label + field
+        command = typst + query + features + root + target + file + todo_label + field
         raw_output = execute(command).strip()
         output = list(map(lambda s : s[1:-1], raw_output[1:-1].split(",")))
         # print("- output = ", output)
