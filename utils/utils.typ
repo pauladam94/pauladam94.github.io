@@ -1,13 +1,28 @@
-#let typ-link(src, body) = {
-  let dst = src.slice("src/".len(), src.len() - ".typ".len()) + ".html"
+#let relative-path(html-path, current-file-path) = {
+  
+  let current-depth = current-file-path.split("/").len() - 1
 
-  [ #metadata(src) <todo> ]
-  link(dst, body)
+  return "../" *  current-depth + "docs/" + html-path
 }
 
+#let typ-link(typ-path, body) = {
+  let html-path = (
+    typ-path.slice("src/".len(), typ-path.len() - ".typ".len()) + ".html"
+  )
+
+  [ #metadata(typ-path) <todo> ]
+
+  let current-file-path = sys.inputs.path
+  link(relative-path(html-path, current-file-path), body)
+}
+
+
+
 #let header = align(center)[
+  = *Paul* J. R. *ADAM*
+
   #table(
-    columns: 4,
+    columns: 4 * (1fr, ),
     column-gutter: 1em,
     link("src/index.typ")[*Home*],
     link("src/cv/cv_2025/main.typ")[*CV*],
@@ -17,6 +32,8 @@
 ]
 
 #let basic-page(cont) = {
+  show heading.where(depth: 1): set align(center)
+
   show align: it => {
     let alignment = if it.alignment.x == none {
       ""
@@ -48,6 +65,6 @@
   }
 
   header
-  
+
   cont
 }

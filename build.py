@@ -13,6 +13,9 @@ field = " --field value "
 todo_label = " \"<todo>\" "
 entry_point = "src/index.typ"
 
+def input_path(path) :
+    return f"--input path={path} "
+
 
 def execute(s : str) -> str:
     print(">>> ", s)
@@ -30,10 +33,10 @@ class Typst:
         dir = "/".join(dest.split("/")[:-1])
         if not os.path.isdir(dir):
             execute(f"mkdir -p {dir}")
-        execute(typst + compile + features + root + format + src + dest)
+        execute(typst + compile + features + root + format + src + dest + input_path(src))
 
     def query_outside_link(self, file):
-        command = typst + query + features + root + target + file + todo_label + field
+        command = typst + query + features + root + target + file + todo_label + field + input_path(file)
         raw_output = execute(command).strip()
         output = list(map(lambda s : s[1:-1], raw_output[1:-1].split(",")))
         # print("- output = ", output)
@@ -52,6 +55,10 @@ while todo != []:
     t.compile(file)
     links = t.query_outside_link(file)
     for link in links:
-        if link not in done and link != "":
+        if link not in done and link not in todo and link != "":
             todo.append(link)
 
+
+print(">>> Those files have been compiled :")
+for file in done:
+    print(f"\t- {file}")

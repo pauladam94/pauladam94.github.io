@@ -1,3 +1,6 @@
+#import "../../utils/utils.typ" : basic-page
+#show : basic-page
+
 = Digitalisation des services et licenciement
 
 == Exemple du quotidien
