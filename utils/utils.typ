@@ -1,8 +1,7 @@
 #let relative-path(html-path, current-file-path) = {
-  
   let current-depth = current-file-path.split("/").len() - 1
 
-  return "../" *  current-depth + "docs/" + html-path
+  return "../" * current-depth + "docs/" + html-path
 }
 
 #let typ-link(typ-path, body) = {
@@ -16,13 +15,11 @@
   link(relative-path(html-path, current-file-path), body)
 }
 
-
-
 #let header = align(center)[
   = *Paul* J. R. *ADAM*
 
   #table(
-    columns: 4 * (1fr, ),
+    columns: 4 * (1fr,),
     column-gutter: 1em,
     link("src/index.typ")[*Home*],
     link("src/cv/cv_2025/main.typ")[*CV*],
@@ -32,6 +29,10 @@
 ]
 
 #let basic-page(cont) = {
+  // show: it => context {
+  //   set page(..) if target() == "paged"
+  //   it
+  // }
   show heading.where(depth: 1): set align(center)
 
   show align: it => {
@@ -56,6 +57,8 @@
   show h: it => {}
   show v: it => {}
 
+  // show page : it => it.body
+
   show link: it => {
     let dest = it.dest
     let body = it.body
@@ -64,7 +67,12 @@
     } else { it }
   }
 
-  header
-
-  cont
+  html.html(
+    html.head(
+      html.style("body { margin:0% 25% 0% 25% }"),
+    ) + 
+    html.body(
+      header + cont,
+    ),
+  )
 }
