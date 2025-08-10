@@ -1,7 +1,7 @@
 #let relative-path(html-path, current-file-path) = {
-  let current-depth = current-file-path.split("/").len() - 1
+  let current-depth = calc.max(0, current-file-path.split("/").len() - 2)
 
-  return "../" * current-depth + "docs/" + html-path
+  return "../" * current-depth + html-path
 }
 
 #let typ-link(typ-path, body) = {
@@ -70,9 +70,9 @@
   html.html(
     html.head(
       html.style("body { margin:0% 25% 0% 25% }"),
-    ) + 
-    html.body(
-      header + cont,
-    ),
+    )
+      + html.body(
+        header + cont,
+      ),
   )
 }
