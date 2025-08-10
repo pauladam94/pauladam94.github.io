@@ -16,7 +16,9 @@
 }
 
 #let header = align(center)[
-  = *Paul* J. R. *ADAM*
+  = *Paul ADAM*
+
+  #align(center)[Etudiant au MPRI, master parisien de recherche informatique.]
 
   #table(
     columns: 4 * (1fr,),
@@ -29,10 +31,6 @@
 ]
 
 #let basic-page(cont) = {
-  // show: it => context {
-  //   set page(..) if target() == "paged"
-  //   it
-  // }
   show heading.where(depth: 1): set align(center)
 
   show align: it => {
@@ -43,21 +41,41 @@
     }
     let body = it.body
 
-    html.elem("div", attrs: (style: "text-align: " + alignment), body)
+    // if alignment == "center" {
+    //   return html.div(
+    //     style: ```css
+    //       display:flex;
+    //       justify-content:center;
+    //       /* align-items:center; */
+    //       /* margin: auto;
+    //       width: 60%;
+    //       border: 3px solid #73AD21;
+    //       padding: 10px; */
+    //     ```.text,
+    //     body,
+    //   )
+    // }
+    // html.div(style: "text-align: " + alignment, body)
+    body
   }
 
   show grid: it => {
-    // list(..(it.children.map(cl => cl.body)))
-    it.children.map(cl => cl.body).join("\n") // map(html.elem("div", c))
+    // it.children.map(cl => cl.body).join("\n")
+
+    let contents = it.children.map(cl => cl.body)
+    table(columns: it.columns, ..contents)
   }
   show stack: it => {
-    // list(..it.children)
-    it.children.join("\n") // map(c => html.elem("div", c))
+    // it.children.join("\n")
+
+    let contents = it.children
+    let columns = if it.dir == ltr or it.dir == rtl {
+      contents.len()
+    } else { 1 }
+    table(columns: columns, ..contents)
   }
   show h: it => {}
   show v: it => {}
-
-  // show page : it => it.body
 
   show link: it => {
     let dest = it.dest
@@ -69,7 +87,26 @@
 
   html.html(
     html.head(
-      html.style("body { margin:0% 25% 0% 25% }"),
+      html.style(
+        ```css
+        body {
+          margin: 0% 25% 0% 25%
+        }
+        table {
+          /* border: 1px solid black; */
+          /* width: 100%; */
+        }
+        table, th, td {
+          /* border-collapse: collapse; */
+          /* border-spacing: 2%; */
+        }
+        th, td {
+          /* border: 1px solid black; */
+          /* width: 100%, */
+          padding: 10px;
+        }
+        ```.text,
+      ),
     )
       + html.body(
         header + cont,
