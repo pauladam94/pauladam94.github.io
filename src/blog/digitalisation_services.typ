@@ -23,9 +23,12 @@ Un objectif evident de réduction des coûts par les entreprises. Attention cepe
 
 == Les chatbots
 
+Les chatbots sont typiquement une "innovation" de ce type ajouté par les entreprises. 
+
 Un outils qui fait perdre du temps et particulièrement inefficace.
-- pour des questions simples un bonne description ou une FAQ mis à jour régulièrement fait généralement l'affaire
+- pour des questions simples une bonne explication ou une FAQ mis à jour régulièrement fait généralement l'affaire
 - pour les questions subtiles ou complexes les chatbots sont incapables d'être précis. Mieux vaut pouvoir parler en ligne à quelqu'un et les interactions peuvent vraiment prendre à peine 20s.
+
 == Deresponsabilisation du personnel
 
 Du fait que les décisions sont prises soit par un ordinateur ou par les supèrieurs via les systèmes informatiques. Les informations sont très opaques et peu expliqué. Quand on essaie de parler avec le peu de personnel en question ils sont démunies et répondent régulièrement "ce n'est pas nous qui avont pris la decision". Ils ne prennent plus les personnels

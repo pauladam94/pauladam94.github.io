@@ -16,9 +16,9 @@
 }
 
 #let header = align(center)[
-  = *Paul ADAM*
+  #title[Paul ADAM]
 
-  #align(center)[Etudiant au MPRI, master parisien de recherche informatique.]
+  #align(center)[Etudiant au MPRI (master parisien de recherche informatique).]
 
   #table(
     columns: 4 * (1fr,),
@@ -27,12 +27,11 @@
     link("src/cv/cv_2025/main.typ")[*CV*],
     link("src/blog.typ")[*Blog*],
     link("src/teaching.typ")[*Teaching*],
+    // link("src/hobbies.typ")[*Hobbies*]
   )
 ]
 
 #let basic-page(cont) = {
-  show heading.where(depth: 1): set align(center)
-
   show align: it => {
     let alignment = if it.alignment.x == none {
       ""
@@ -41,21 +40,6 @@
     }
     let body = it.body
 
-    // if alignment == "center" {
-    //   return html.div(
-    //     style: ```css
-    //       display:flex;
-    //       justify-content:center;
-    //       /* align-items:center; */
-    //       /* margin: auto;
-    //       width: 60%;
-    //       border: 3px solid #73AD21;
-    //       padding: 10px; */
-    //     ```.text,
-    //     body,
-    //   )
-    // }
-    // html.div(style: "text-align: " + alignment, body)
     body
   }
 
@@ -90,19 +74,13 @@
       html.style(
         ```css
         body {
-          margin: 0% 25% 0% 25%
+          margin: 0% max(2vw, calc(30vw - 200px)) 0% max(2vw, calc(30vw - 200px));
         }
         table {
-          /* border: 1px solid black; */
-          /* width: 100%; */
         }
         table, th, td {
-          /* border-collapse: collapse; */
-          /* border-spacing: 2%; */
         }
         th, td {
-          /* border: 1px solid black; */
-          /* width: 100%, */
           padding: 10px;
         }
         ```.text,
