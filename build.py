@@ -1,64 +1,107 @@
 import subprocess
-import json
 import os
+import time
+
+RESUME = []
 
 typst = " typst "
 compile = " c "
 features = " --features html"
 query = " query "
-format = " -f html "
 target = "--target html "
 root = " --root . "
 field = " --field value "
-todo_label = " \"<todo>\" "
+
+
+def todo_label(s):
+    return f' "<todo-{s}>" '
+
+
 entry_point = "src/index.typ"
 
-def input_path(path) :
-    return f"--input path={path} "
+
+def input(name, value):
+    return f"--input {name}={value} "
 
 
-def execute(s : str) -> str:
+def lang(file):
+    lang_name = "fr"
+    return input("lang", lang_name)
+
+
+def execute(s: str) -> str:
     print(">>> ", s)
     return subprocess.check_output(s, shell=True).decode("utf-8")
 
+
 class Typst:
-    def __init__(self):
-        pass
-
-    def c(self, file):
-        self.compile(file)
-
-    def compile(self, src):
-        dest = " docs/" + src[len("src/"):len(src) - len(".typ")] + ".html "
+    def compile(self, src, extension):
+        dest = " docs/" + src[len("src/") : len(src) - len(".typ")] + f".{extension} "
         dir = "/".join(dest.split("/")[:-1])
         if not os.path.isdir(dir):
             execute(f"mkdir -p {dir}")
-        execute(typst + compile + features + root + format + src + dest + input_path(src))
+        execute(typst + compile + features + root + src + dest + input("path", src))
 
-    def query_outside_link(self, file):
-        command = typst + query + features + root + target + file + todo_label + field + input_path(file)
+    def query_outside_link(self, file, type_file):
+        command = (
+            typst
+            + query
+            + features
+            + root
+            + target
+            + file
+            + todo_label(type_file)
+            + field
+            + input("path", file)
+        )
         raw_output = execute(command).strip()
-        output = list(map(lambda s : s[1:-1], raw_output[1:-1].split(",")))
-        # print("- output = ", output)
+        output = list(map(lambda s: s[1:-1], raw_output[1:-1].split(",")))
         return output
 
-todo = [entry_point]
+
+init_time = time.time()
+
+todo_html = [entry_point]
+todo_pdf = []
 done = []
 t = Typst()
 execute("rm -rf docs/*")
 
-while todo != []:
-    file = todo.pop()
+
+def not_treated(file, todo, done):
+    return (file not in done) and (file not in todo) and (file != "")
+
+
+while todo_html != []:
+    file = todo_html.pop()
     done.append(file)
-    # print("- file = ", file)
 
-    t.compile(file)
-    links = t.query_outside_link(file)
+    if not os.path.exists(file):
+        continue
+
+    t.compile(file, "html")
+    RESUME.append(f"\nCOMPILE : \"{file}\"")
+
+    links = t.query_outside_link(file, "html")
     for link in links:
-        if link not in done and link not in todo and link != "":
-            todo.append(link)
+        if not_treated(link, todo_html, done):
+            RESUME.append(f"HTML-> \"{link}\"")
+            todo_html.append(link)
+
+    links = t.query_outside_link(file, "pdf")
+    for link in links:
+        if link.strip() != "":
+            RESUME.append(f"PDF-> \"{link}\"")
+            todo_pdf.append(link)
+
+print(">>> RESUME :")
+for line in RESUME:
+    print(line)
+
+for file in todo_pdf:
+    t.compile(file, "pdf")
 
 
-print(">>> Those files have been compiled :")
+print(f">>> {len(done)} files have been compiled in {time.time() - init_time:.1f}s :")
 for file in done:
     print(f"\t- {file}")

@@ -8,4 +8,10 @@
   link("src/blog/pays_et_langues.typ")[
     Les Pays et les langes - ? Aout 2025
   ],
+  link("src/blog/papier_numérique.typ")[
+    Ecrire sur papier ou Ordinateur ? - Aout 2025
+  ],
+  link("src/blog/agreg_rapport.typ")[
+    Ma (mauvais) appréciation de mes oraux d'agrégation d'informatique - Juin 2025
+  ],
 )

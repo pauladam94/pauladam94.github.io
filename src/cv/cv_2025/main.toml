@@ -70,7 +70,7 @@ title.fr = "Master 2 Agrégation Informatique"
 title.en = "Second Year Computer Science Master"
 place = "ENS Rennes, France"
 cours.fr = [
-  "Apprentissable, IA",
+  "Apprentissage, IA",
   "Langage Formel",
   "Programmation Théorique et Compilation", 
   "Sémantique (Logique, Lambda Calcul)",

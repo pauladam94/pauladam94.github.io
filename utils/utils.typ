@@ -1,7 +1,7 @@
-#let relative-path(html-path, current-file-path) = {
+#let relative-path(path, current-file-path) = {
   let current-depth = calc.max(0, current-file-path.split("/").len() - 2)
 
-  return "../" * current-depth + html-path
+  return "../" * current-depth + path
 }
 
 #let typ-link(typ-path, body) = {
@@ -9,29 +9,54 @@
     typ-path.slice("src/".len(), typ-path.len() - ".typ".len()) + ".html"
   )
 
-  [ #metadata(typ-path) <todo> ]
+  [ #metadata(typ-path) <todo-html> ]
 
   let current-file-path = sys.inputs.path
   link(relative-path(html-path, current-file-path), body)
 }
 
-#let header = align(center)[
-  #title[Paul ADAM]
-
-  #align(center)[Etudiant au MPRI (master parisien de recherche informatique).]
-
-  #table(
-    columns: 4 * (1fr,),
-    column-gutter: 1em,
-    link("src/index.typ")[*Home*],
-    link("src/cv/cv_2025/main.typ")[*CV*],
-    link("src/blog.typ")[*Blog*],
-    link("src/teaching.typ")[*Teaching*],
-    // link("src/hobbies.typ")[*Hobbies*]
+#let pdf-version() = {
+  let current-file-path = sys.inputs.path
+  let pdf-path = (
+    current-file-path.slice(
+      "src/".len(),
+      current-file-path.len() - ".typ".len(),
+    )
+      + ".pdf"
   )
-]
+  [ #metadata(current-file-path) <todo-pdf> ]
+  link(relative-path(pdf-path, current-file-path))[
+    PDF version of page #image("../assets/pdf_download.png", height: 1em)
+  ]
+}
 
-#let basic-page(cont) = {
+#let header() = {
+  align(center)[
+    #if "lang" in sys.inputs {
+      str(sys.inputs.lang)
+    }
+
+    #title[Paul ADAM]
+
+    #align(
+      center,
+    )[Etudiant au MPRI (master parisien de recherche informatique).]
+
+    #table(
+      columns: 5 * (1fr,),
+      column-gutter: 1em,
+      link("src/index.typ")[*Home*],
+      link("src/cv/cv_2025/main.typ")[*CV*],
+      link("src/blog.typ")[*Blog*],
+      link("src/teaching.typ")[*Teaching*],
+      link("src/these.typ")[*Thèse*],
+    )
+  ]
+}
+
+#let basic-page(include-header: true, include-pdf: false, cont) = context {
+  if target() == "paged" { return cont }
+
   show align: it => {
     let alignment = if it.alignment.x == none {
       ""
@@ -43,15 +68,18 @@
     body
   }
 
-  show grid: it => {
-    // it.children.map(cl => cl.body).join("\n")
+  show place: it => {
+    it.body
+  }
 
+  show footnote: it => {
+    html.span(title: str(repr(it.body)), super[\*])
+  }
+  show grid: it => {
     let contents = it.children.map(cl => cl.body)
     table(columns: it.columns, ..contents)
   }
   show stack: it => {
-    // it.children.join("\n")
-
     let contents = it.children
     let columns = if it.dir == ltr or it.dir == rtl {
       contents.len()
@@ -87,7 +115,9 @@
       ),
     )
       + html.body(
-        header + cont,
+        if include-header { header() }
+          + if include-pdf { pdf-version() }
+          + cont,
       ),
   )
 }

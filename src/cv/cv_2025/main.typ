@@ -1,6 +1,3 @@
-#import "../../../utils/utils.typ": basic-page
-#show: basic-page
-
 #let cv(lang) = [
 
   #assert(
@@ -170,6 +167,8 @@
   }
 ]
 
+#import "../../../utils/utils.typ": basic-page
+#show: basic-page.with(include-pdf: true)
 
 #cv("fr")
 #cv("en")

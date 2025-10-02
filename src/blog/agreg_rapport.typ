@@ -1,3 +1,6 @@
+#import "../../utils/utils.typ": basic-page
+#show: basic-page
+
 = Compte-rendu oraux agreg 2025
 
 Auteur: Paul ADAM
@@ -30,13 +33,13 @@ I. Notions d'architectures (Tortue)
 
 II. Circuits Combinatoire (II. Vahid)
 
-   - A. Porte Logique
-   - B. Algèbre Booléenne
+- A. Porte Logique
+- B. Algèbre Booléenne
 
 III. Circuits Séquentiels (III. Vahid)
 
-   - A. Stocker 1 bits
-   - B. Machine à Etats
+- A. Stocker 1 bits
+- B. Machine à Etats
 
 
 === Présentation
@@ -99,8 +102,8 @@ Titre : Réseaux embarqués
 
 I. Performance dans un réseau
 
-   - A. Différents type de délai
-   - B. Hyppothèses de l'embarqué
+- A. Différents type de délai
+- B. Hyppothèses de l'embarqué
 II. Exemple avec 2 Routeurs
 
 - ici j'ai montré mon code qui simulait un petit réseau avec 2 éléments.
@@ -117,13 +120,13 @@ j'ai parlé du fait que augmenter les performances du réseau ne diminuait pas n
 
 - qu'est ce qui peut crée l'effet rebond ?
 
- - beaucoup de questions de cours de réseaux.
+  - beaucoup de questions de cours de réseaux.
 
- - quelles sont les différentes couches d'encapsulation en réseau ? (TCP / IP)
+  - quelles sont les différentes couches d'encapsulation en réseau ? (TCP / IP)
 
- - quel est la différence entre une trame et un paquet ? (je savais plus)
+  - quel est la différence entre une trame et un paquet ? (je savais plus)
 
- - quels sont les autres enjeux de l'embarqué que ce vous avez présenté
+  - quels sont les autres enjeux de l'embarqué que ce vous avez présenté
 
 === Retours?
 
@@ -143,11 +146,11 @@ L'audit de code portait sur le calcul de (J'ai passé 1h20 du l'audit).
 
 Le sujet portait sur l'implémentation de 2 algorithmes :
 
-    - DPLL (en C)
+- DPLL (en C)
 
-    - arbre BDD (avec partage maximal) (En Ocaml)
+- arbre BDD (avec partage maximal) (En Ocaml)
 
-    
+
 
 Une question (sur la partie C) portait sur le parsing de fichier .cnf, j'ai un peu panqiué sur ça je pense. J'arrivais pas à faire fonctionner mon code du coup ça m'a pris beaucoup de temps.
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0% max(2vw, calc(30vw - 200px)) 0% max(2vw, calc(30vw - 200px));
+      }
+      table {
+      }
+      table, th, td {
+      }
+      th, td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Paul ADAM</h1>
+    <p>Etudiant au MPRI (master parisien de recherche informatique).</p>
+    <table>
+      <tr>
+        <td><a href="../index.html"><strong>Home</strong></a></td>
+        <td><a href="../cv/cv_2025/main.html"><strong>CV</strong></a></td>
+        <td><a href="../blog.html"><strong>Blog</strong></a></td>
+        <td><a href="../teaching.html"><strong>Teaching</strong></a></td>
+        <td><a href="../these.html"><strong>Thèse</strong></a></td>
+      </tr>
+    </table>
+    <h2>Compte-rendu oraux agreg 2025</h2>
+    <p>Auteur: Paul ADAM</p>
+    <h3>Leçon (prediction note >= 16, note : 19)</h3>
+    <h4>Couplage (et choix)</h4>
+    <ol>
+      <li value="4">Principe d’induction ;</li>
+    </ol>
+    <p>je connaissais le plan mais mes 2 devs :</p>
+    <ul>
+      <li>
+        <p>dijkstra (très solide)</p>
+      </li>
+      <li>
+        <p>LL1 Nullable First Follow définit par induction (très peu solide)</p>
+      </li>
+    </ul>
+    <ol>
+      <li value="22">Fonctions et circuits booléens en architecture des ordinateurs (Leçon choisi)</li>
+    </ol>
+    <p>Je ne connaissais pas le plan, mais je savais que la source, c’était le Vahid / Patterson</p>
+    <ul>
+      <li>
+        <p>Additionneur optimisé (très solide, je l’ai fait plusieurs fois au tableaux)</p>
+      </li>
+      <li>
+        <p>Mini FSM (je ne l’avais jamais fait, mais je savais où le trouver)(Dev choisi)</p>
+      </li>
+    </ul>
+    <p>Plan lecon 22 :</p>
+    <p>I. Notions d’architectures (Tortue)</p>
+    <p>II. Circuits Combinatoire (II. Vahid)</p>
+    <ul>
+      <li>A. Porte Logique</li>
+      <li>B. Algèbre Booléenne</li>
+    </ul>
+    <p>III. Circuits Séquentiels (III. Vahid)</p>
+    <ul>
+      <li>A. Stocker 1 bits</li>
+      <li>B. Machine à Etats</li>
+    </ul>
+    <h4>Présentation</h4>
+    <p>Défense de plan : tout s’est bien passé et j’ai fini dans les temps (un peu court sur la fin).</p>
+    <p>Le développement s’est bien passé (j’ai commencé par croire que j’avais que 10min et faire tout hyper vite au tableau). Au bout de 10min je me suis dit que j’avais encore 10min du coup j’ai reparlé de tout, j’ai fait un exemple plus détaillé etc… Finalement ça s’est vu, mais je pense que ça ne m’a pas pénalisé.</p>
+    <h4>Questions</h4>
+    <ul>
+      <li>
+        <p>comment présenter ça aux élèves ?</p>
+      </li>
+      <li>
+        <p>la leçon e a t’elle des prérequis, si oui lesquels ?</p>
+      </li>
+      <li>
+        <p>commen utiliser le logiciel “logisim” avec des élèves ?</p>
+      </li>
+      <li>
+        <p>comment on fait un appel de fonction ?</p>
+      </li>
+      <li>
+        <p>ajouter quel instruction pour être turing complet ?</p>
+      </li>
+      <li>
+        <p>ça veut dire quoi avoir une architecture 16 bits ?</p>
+      </li>
+      <li>
+        <p>c’est quoi la taille de vos instructions ?</p>
+      </li>
+      <li>
+        <p>comment ajouter une nouvelle instruction ?</p>
+      </li>
+      <li>
+        <p>questions de détails sur comment selectionner un registres</p>
+      </li>
+      <li>
+        <p>questions sur comment modifier un registres</p>
+      </li>
+      <li>
+        <p>questions sur les logiciels de compilation de FSM vers du matèriel</p>
+      </li>
+      <li>
+        <p>comment on compile une FSM vers du matèriel ?</p>
+      </li>
+      <li>
+        <p>qu’est ce qui est stocké dans le tas, la pile, le segment de données ?</p>
+      </li>
+    </ul>
+    <h4>Retours ?</h4>
+    <p>ça s’est super bien passé, j’ai répondu à toute les questions. A la fin ils n’avaient plus de questions.</p>
+    <p>J’ai fait des blagues en milieu d’oral et ils ont rigolé, c’était nickel, j’aurais difficilement pu faire mieux.</p>
+    <h3>Modélisation (prédiction : 14 >= note >= 10, note : 7,25)</h3>
+    <h4>Sujet</h4>
+    <p>Réseaux embarqués et échange de données entre des systèmes proches (on néglige le temps de propagation car les distances sont trop courtes)</p>
+    <h4>Présentation</h4>
+    <p>Titre : Réseaux embarqués</p>
+    <p>I. Performance dans un réseau</p>
+    <ul>
+      <li>A. Différents type de délai</li>
+      <li>B. Hyppothèses de l’embarqué</li>
+    </ul>
+    <p>II. Exemple avec 2 Routeurs</p>
+    <ul>
+      <li>ici j’ai montré mon code qui simulait un petit réseau avec 2 éléments.</li>
+    </ul>
+    <p>III. Problème de congestion</p>
+    <ul>
+      <li>j’ai montré avec ma simulation que l’on pouvait facilement crée de la congestion sur la file d’attente d’un switch</li>
+    </ul>
+    <p>IV. Problème de l’effet rebond (Point Sociétale)</p>
+    <p>j’ai parlé du fait que augmenter les performances du réseau ne diminuait pas néccéssairement la quantité de machine utilisé dans le réseau ni même la consommation de celle-ci.</p>
+    <h4>Questions</h4>
+    <ul>
+      <li>
+        <p>qu’est ce qui peut crée l’effet rebond ?</p>
+        <ul>
+          <li>
+            <p>beaucoup de questions de cours de réseaux.</p>
+          </li>
+          <li>
+            <p>quelles sont les différentes couches d’encapsulation en réseau ? (TCP / IP)</p>
+          </li>
+          <li>
+            <p>quel est la différence entre une trame et un paquet ? (je savais plus)</p>
+          </li>
+          <li>
+            <p>quels sont les autres enjeux de l’embarqué que ce vous avez présenté</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Retours?</h4>
+    <p>Ca s’est pas super bien passé, j’ai pas hyper bien répondu au question de réseaux.</p>
+    <p>Je pense avoir été un peu à côté du sujet (ce qui était mon objectif parce que je voulais pas parler de routage).</p>
+    <h3>TP (prédiction note &lt;= 11, note : 18 (je ne comprends pas))</h3>
+    <h4>Sujet</h4>
+    <p>L’audit de code portait sur le calcul de (J’ai passé 1h20 du l’audit).</p>
+    <p>Le sujet portait sur l’implémentation de 2 algorithmes :</p>
+    <ul>
+      <li>
+        <p>DPLL (en C)</p>
+      </li>
+      <li>
+        <p>arbre BDD (avec partage maximal) (En Ocaml)</p>
+      </li>
+    </ul>
+    <p>Une question (sur la partie C) portait sur le parsing de fichier .cnf, j’ai un peu panqiué sur ça je pense. J’arrivais pas à faire fonctionner mon code du coup ça m’a pris beaucoup de temps.</p>
+    <h4>Présentation</h4>
+    <p>Ma présenation était vraiment pas très bien. Le sujet était super dense et je l’ai assez mal traité. J’ai du aller vite sur des points et je n’ai pas brillé sur celà. Comme j’ai particulièrment était faible sur le sujet et pas sur l’audit de code, j’ai décidé de faire 11 min sur l’audit de code pour montrer un peu que mon audit était bien.</p>
+    <h4>Questions</h4>
+    <p>Il n’y a QUE des questions sur les algorithmes mis en place. Très peu de questions sur les multiples questions intermédiaires des deux sujets. Comme mes questions finales des sujets ne fonctionnaient pas, ils m’ont un peu détruit sur les implémentations de mon DPLL que j’ai fait au dernier moment (et qui ne marchait pas)..</p>
+    <p>Aucune question sur le parsing, quasiment aucune questions sur les fonctions intermédiaires.</p>
+    <p>A la toute fin, ils m’ont posé la question sur l’audit de comment expliquer à un élève de faire moins de tests pour potentiellement faire plus d’autres choses ? C’était assez désagréable parce que ça sous-entendait que j’aurais du faire moins de tests pour me concentrer sur le sujet du TP (ce qui est vrai, mais ce ne sont pas les 3-4 tests de mes audits qui m’ont empêché de faire le reste du sujet).</p>
+    <h4>Retours?</h4>
+    <p>L’audit de code était solide, j’ai bien corrigé le code avec beaucoup de tests.</p>
+    <p>J’ai vraiment fait un oral terrible. J’ai eu l’impression de tout faire à l’envers. J’ai eu des réponses satisfaisantes à quasiment aucun des questions. J’en déduis une très mauvaise note pour et oral malheursement.</p>
+  </body>
+</html>
