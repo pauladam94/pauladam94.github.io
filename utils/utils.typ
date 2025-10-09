@@ -1,12 +1,12 @@
 #let relative-path(path, current-file-path) = {
-  let current-depth = calc.max(0, current-file-path.split("/").len() - 2)
+  let current-depth = calc.max(0, current-file-path.split("/").len() - 1)
 
   return "../" * current-depth + path
 }
 
 #let typ-link(typ-path, body) = {
   let html-path = (
-    typ-path.slice("src/".len(), typ-path.len() - ".typ".len()) + ".html"
+    typ-path.slice(0, typ-path.len() - ".typ".len()) + ".html"
   )
 
   [ #metadata(typ-path) <todo-html> ]
@@ -15,28 +15,53 @@
   link(relative-path(html-path, current-file-path), body)
 }
 
-#let pdf-version() = {
-  let current-file-path = sys.inputs.path
-  let pdf-path = (
-    current-file-path.slice(
-      "src/".len(),
-      current-file-path.len() - ".typ".len(),
+#let pdf-show-link(typ-path) = {
+  if sys.inputs.in_query == "true" {
+    [ #metadata(typ-path) <todo-pdf> ]
+  } else {
+    let current-file-path = sys.inputs.path
+    let pdf-path = (
+      typ-path.slice(0, typ-path.len() - ".typ".len()) + ".pdf"
     )
-      + ".pdf"
-  )
-  [ #metadata(current-file-path) <todo-pdf> ]
-  link(relative-path(pdf-path, current-file-path))[
-    PDF version of page #image("../assets/pdf_download.png", height: 1em)
-  ]
+    link(relative-path(pdf-path, current-file-path), image(
+      "../docs/" + typ-path.slice(0, typ-path.len() - ".typ".len()) + ".pdf",
+      height: 200pt,
+    ))
+  }
 }
 
-#let header() = {
+#let pdf-version = {
+  let current-file-path = sys.inputs.path
+  let pdf-path = (
+    current-file-path.slice(0, current-file-path.len() - ".typ".len()) + ".pdf"
+  )
+  [ #metadata(current-file-path) <todo-pdf> ]
+  link(relative-path(pdf-path, current-file-path), html.span(title: "PDF version of this HTML page.", image(
+    "../utils/pdf_download.png",
+    height: 3em,
+  )))
+}
+
+#let header(include-header, include-pdf) = {
+  if not include-header {
+    if include-pdf {
+      return align(top + left, pdf-version)
+    }
+    return
+  }
   align(center)[
     #if "lang" in sys.inputs {
       str(sys.inputs.lang)
     }
 
-    #title[Paul ADAM]
+    #if include-pdf {
+      table(
+        columns: 2 * (20fr, 1fr),
+        title[Paul ADAM], pdf-version,
+      )
+    } else [
+      #title[Paul ADAM]
+    ]
 
     #align(
       center,
@@ -45,11 +70,11 @@
     #table(
       columns: 5 * (1fr,),
       column-gutter: 1em,
-      link("src/index.typ")[*Home*],
-      link("src/cv/cv_2025/main.typ")[*CV*],
-      link("src/blog.typ")[*Blog*],
-      link("src/teaching.typ")[*Teaching*],
-      link("src/these.typ")[*Thèse*],
+      link("index.typ")[*Home*],
+      link("cv/cv_2025/main.typ")[*CV*],
+      link("blog/blog.typ")[*Blog*],
+      link("teaching/teaching.typ")[*Teaching*],
+      link("these/these.typ")[*Thèse*],
     )
   ]
 }
@@ -57,6 +82,7 @@
 #let basic-page(include-header: true, include-pdf: false, cont) = context {
   if target() == "paged" { return cont }
 
+  show math.equation: html.frame
   show align: it => {
     let alignment = if it.alignment.x == none {
       ""
@@ -66,10 +92,6 @@
     let body = it.body
 
     body
-  }
-
-  show place: it => {
-    it.body
   }
 
   show footnote: it => {
@@ -115,9 +137,8 @@
       ),
     )
       + html.body(
-        if include-header { header() }
-          + if include-pdf { pdf-version() }
-          + cont,
+        header(include-header, include-pdf) + cont,
       ),
   )
 }
+
