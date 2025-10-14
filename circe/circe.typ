@@ -9,4 +9,4 @@
 
 
 - CV
-- #link("circe/m2_comedie.typ")[Master de Comédie 2023 et 2024]
+// - #link("circe/m2_comedie.typ")[Master de Comédie 2023 et 2024]

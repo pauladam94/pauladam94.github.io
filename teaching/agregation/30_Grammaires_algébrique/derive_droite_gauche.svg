@@ -1,0 +1,54 @@
+<svg width="134pt" height="188pt" viewBox="0.00 0.00 134.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184 130,-184 130,4 -4,4"/>
+<!-- axiom -->
+<g id="node1" class="node">
+<title>axiom</title>
+<ellipse fill="none" stroke="black" cx="63" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="63" y="-157.8" font-family="Times,serif" font-size="14.00">S</text>
+</g>
+<!-- s0 -->
+<g id="node2" class="node">
+<title>s0</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="27" y="-85.8" font-family="Times,serif" font-size="14.00">X</text>
+</g>
+<!-- axiom&#45;&gt;s0 -->
+<g id="edge1" class="edge">
+<title>axiom-&gt;s0</title>
+<path fill="none" stroke="black" d="M54.65,-144.76C50.42,-136.55 45.19,-126.37 40.42,-117.09"/>
+<polygon fill="black" stroke="black" points="43.68,-115.79 36,-108.49 37.46,-118.99 43.68,-115.79"/>
+</g>
+<!-- s1 -->
+<g id="node3" class="node">
+<title>s1</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="99" y="-85.8" font-family="Times,serif" font-size="14.00">Y</text>
+</g>
+<!-- axiom&#45;&gt;s1 -->
+<g id="edge2" class="edge">
+<title>axiom-&gt;s1</title>
+<path fill="none" stroke="black" d="M71.35,-144.76C75.58,-136.55 80.81,-126.37 85.58,-117.09"/>
+<polygon fill="black" stroke="black" points="88.54,-118.99 90,-108.49 82.32,-115.79 88.54,-118.99"/>
+</g>
+<!-- end -->
+<g id="node4" class="node">
+<title>end</title>
+<ellipse fill="none" stroke="black" cx="63" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="63" y="-13.8" font-family="Times,serif" font-size="14.00">w</text>
+</g>
+<!-- s0&#45;&gt;end -->
+<g id="edge3" class="edge">
+<title>s0-&gt;end</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M35.35,-72.76C39.58,-64.55 44.81,-54.37 49.58,-45.09"/>
+<polygon fill="black" stroke="black" points="52.54,-46.99 54,-36.49 46.32,-43.79 52.54,-46.99"/>
+</g>
+<!-- s1&#45;&gt;end -->
+<g id="edge4" class="edge">
+<title>s1-&gt;end</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M90.65,-72.76C86.42,-64.55 81.19,-54.37 76.42,-45.09"/>
+<polygon fill="black" stroke="black" points="79.68,-43.79 72,-36.49 73.46,-46.99 79.68,-43.79"/>
+</g>
+</g>
+</svg>

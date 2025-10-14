@@ -1,21 +1,26 @@
 // import fletcher for doing graph / automata
-#import "@preview/fletcher:0.5.8" as fletcher: edge, node, diagram
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 
 // import the agreg template
-#import "@preview/agregyst:0.1.0" : tableau, dev, recap, item
-#show : tableau
+#import "@preview/agregyst:0.1.0": dev, item, tableau
+#show: tableau
 
 = Example cheatsheet
 
 == First Paragraph
-
+=== Second Para
 // Definition of a graph
 #item("Définition")[A Graph][
-    is
+  is
 ]
 
 #colbreak()
 
+== Second paragraph
+
+== Second paragraph
+== Second paragraph
+== Second paragraph
 == Second paragraph
 
 Here is an automata :
@@ -24,11 +29,13 @@ Here is an automata :
   node((0, 0), $x$, name: <x>),
   node((0, 1), $y$, name: <y>),
   node((1, 0), $z$, name: <z>),
-  node((3, 2), $t$),
-  node((3, 2), $t$),
+  node((2, 1), $t$, name: <t>),
+  node((1, 2), $a$),
+
   edge(<x>, <y>, "->"),
-  edge(<z>, <z>, "->", bend: 20deg),
-  edge(<y>, "->")
+  edge(<z>, <z>, "->", bend: 145deg),
+  edge(<t>, <y>, "->"),
+  edge(<y>, <z>),
 ))
 
 == Second Paragraph
@@ -43,3 +50,5 @@ Here is a theorem with a figure on the right.
 
 
 Here is a theorem with a figure inside of it
+
+

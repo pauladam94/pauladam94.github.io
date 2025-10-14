@@ -15,18 +15,24 @@
   link(relative-path(html-path, current-file-path), body)
 }
 
-#let pdf-show-link(typ-path) = {
+#let pdf-show-link(typ-path, cont, page: 1) = {
   if sys.inputs.in_query == "true" {
     [ #metadata(typ-path) <todo-pdf> ]
+    cont
   } else {
     let current-file-path = sys.inputs.path
     let pdf-path = (
       typ-path.slice(0, typ-path.len() - ".typ".len()) + ".pdf"
     )
-    link(relative-path(pdf-path, current-file-path), image(
-      "../docs/" + typ-path.slice(0, typ-path.len() - ".typ".len()) + ".pdf",
-      height: 200pt,
-    ))
+    link(relative-path(pdf-path, current-file-path), [
+      #cont :
+
+      #image(
+        "../docs/" + typ-path.slice(0, typ-path.len() - ".typ".len()) + ".pdf",
+        height: 400pt,
+        page: page,
+      )
+    ])
   }
 }
 
@@ -36,10 +42,13 @@
     current-file-path.slice(0, current-file-path.len() - ".typ".len()) + ".pdf"
   )
   [ #metadata(current-file-path) <todo-pdf> ]
-  link(relative-path(pdf-path, current-file-path), html.span(title: "PDF version of this HTML page.", image(
-    "../utils/pdf_download.png",
-    height: 3em,
-  )))
+  link(relative-path(pdf-path, current-file-path), html.span(
+    title: "PDF version of this HTML page.",
+    image(
+      "../utils/pdf_download.png",
+      height: 3em,
+    ),
+  ))
 }
 
 #let header(include-header, include-pdf) = {
