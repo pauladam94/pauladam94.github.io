@@ -90,19 +90,17 @@ execute("rm -rf docs/*")
 def not_treated(file, todo, done):
     return (file not in done) and (file not in todo) and (file != "")
 
+
 def timer():
     pass
+
 
 while todo["html"] != []:
     file = todo["html"].pop()
     done.append(file)
-    # done.append("/".join(file.split(".")[:-1]) + ".html")
 
     if not os.path.exists(file):
         continue
-
-    # t.compile(file, "html")
-    # RESUME.append(f'\nCOMPILE : "{file}"')
 
     type = "html"
     links = t.query_outside_link(file, type)
